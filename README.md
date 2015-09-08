@@ -21,7 +21,7 @@ apt-get install php5-curl php5-sqlite php5-cli
 apt-get install git
 git clone https://github.com/intrd/instagram-api-oauth/
 ```
-**Attention**: stay outside main project directory and follow these commands below..
+**Attention**: stay outside main project path and install dependencies/directory structure..
 
 ## Dependencies installation
 ```
