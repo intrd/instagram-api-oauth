@@ -20,7 +20,7 @@ $api_instagram_access_token=trim($userdata[2]);
 echo "***logged_token: ".$api_instagram_access_token;
 $arv=$tmp_path."arv"; //cookie path (if u want to force logout, just delete this file)
 
-$username="intrd";
+$username="test";
 $userid=instagram_oauth_get_userid($username,$api_instagram_access_token,$arv);
 vd($userid);
 
