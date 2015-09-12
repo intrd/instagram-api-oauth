@@ -15,8 +15,8 @@
 
 $debug=false;
 $root=dirname(__FILE__)."/";
-$tmp_path=$root."tmp/";
 $ext_path=$root."../";
+$tmp_path=$ext_path."TMP/";
 
 include("functions.php");
 

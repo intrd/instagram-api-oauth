@@ -31,8 +31,9 @@ ex: git clone https://github.com/intrd/php-common/
 
 ## Directory structure
 Create these directories & files:
-* logs/
-* tmp/
+
+* ../LOGS 
+* ../TMP
 
 Generate INSTAGRAM oauth token
 ```
