@@ -41,9 +41,22 @@ function instagram_oauth_get_userdetails($userid,$api_instagram_access_token){
   }
   return false; 
 }
-function instagram_oauth_get_postdetails($shortcode,$api_instagram_access_token){
+function instagram_oauth_get_postdetails($shortcode,$api_instagram_access_token,$cookie_jar_file=false){
   $token = $api_instagram_access_token;
   $url = "https://api.instagram.com/v1/media/shortcode/$shortcode?access_token=".$token;
+  $header = array();
+  $get = url_get($url,$cookie_jar_file,"r",$header)["content"];
+  $json = json_decode($get);
+  //$json=$json->data;
+  if (isset($json->data->likes->count)){
+    return $json->data;
+  }
+  return false; 
+}
+
+function instagram_oauth_get_postdetails_mediaid($mediaid,$api_instagram_access_token,$cookie_jar_file=false){
+  $token = $api_instagram_access_token;
+  $url = "https://api.instagram.com/v1/media/$mediaid?access_token=".$token;
   $header = array();
   $get = url_get($url,$cookie_jar_file,"r",$header)["content"];
   $json = json_decode($get);
