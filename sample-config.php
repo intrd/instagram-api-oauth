@@ -18,6 +18,8 @@ $root=dirname(__FILE__)."/";
 $ext_path=$root."../";
 $tmp_path=$ext_path."TMP/";
 
+$userdata=file($ext_path."instagram-login.txt"); /* CREATE THIS FILE W/ USERNAME/OAUTH_ACCESSTOKEN LINEOVERLINE */
+
 include("functions.php");
 
 

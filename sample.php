@@ -15,7 +15,7 @@
 
 include("sample-config.php");
 
-$userdata=file($ext_path."instagram-login.txt"); /* CREATE THIS FILE W/ LOGIN/PW LINEOVERLINE */
+
 $api_instagram_access_token=trim($userdata[2]);
 echo "***logged_token: ".$api_instagram_access_token;
 $arv=$tmp_path."arv"; //cookie path (if u want to force logout, just delete this file)
