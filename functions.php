@@ -82,4 +82,26 @@ function instagram_oauth_friendshipshow($username,$api_instagram_access_token,$c
   }
   return false; 
 }
+
+function instagram_oauth_getshortcode($object,$api_instagram_access_token,$cookie){
+  //echo "\n!!! converting instagram media-id.. ";
+  $scode=instagram_oauth_get_postdetails_mediaid($object,$api_instagram_access_token,$cookie); //convertendo insta mediaid to url
+  //vd($scode);
+  //die;
+  if (isset($scode->link) and strlen($scode->link)>6){
+    $ismedia=$object;
+    //$object=$scode->user->username;
+    //$object=$target[4];
+    $shortcode=$scode->link;
+    //$shortcode=getInnerString("/p/","/",$shortcode);
+    //echo $object;
+    //vd($scode);
+    //die;
+    //echo "\n  ***$shortcode|$object";
+    return $shortcode;
+  }else{
+    echo "\n  ***CRITICAL converting mediaid!";
+    return false;
+  }
+}
 ?>
