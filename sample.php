@@ -15,12 +15,15 @@
 
 include("sample-config.php");
 
-
-$api_instagram_access_token=trim($userdata[2]);
-echo "***logged_token: ".$api_instagram_access_token;
-$arv=$tmp_path."arv"; //cookie path (if u want to force logout, just delete this file)
+$debug=false;
+$root=dirname(__FILE__)."/";
+$ext_path=$root."../";
+$tmp_path=$ext_path."TMP/";
 
 $username="test";
+$api_instagram_access_token="3453453.sdafsddsf.9ds8df8as99ds8df89ds9ds"; //see README.md to learn how to create your own access token
+$arv=$tmp_path.$username."_samplecookie"; //cookie path (if u want to force logout, just delete this file)
+
 $userid=instagram_oauth_get_userid($username,$api_instagram_access_token,$arv);
 vd($userid);
 
