@@ -13,12 +13,12 @@
 * 	https://github.com/intrd/php-common/
 */
 
-include("sample-config.php");
-
 $debug=false;
 $root=dirname(__FILE__)."/";
 $ext_path=$root."../";
 $tmp_path=$ext_path."TMP/";
+
+include("functions.php");
 
 $username="test";
 $api_instagram_access_token="3453453.sdafsddsf.9ds8df8as99ds8df89ds9ds"; //see README.md to learn how to create your own access token
