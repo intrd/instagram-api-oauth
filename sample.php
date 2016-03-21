@@ -20,12 +20,21 @@ $tmp_path=$ext_path."TMP/";
 
 include("functions.php");
 
-$username="test";
-$api_instagram_access_token="3453453.sdafsddsf.9ds8df8as99ds8df89ds9ds"; //see README.md to learn how to create your own access token
-$arv=$tmp_path.$username."_samplecookie"; //cookie path (if u want to force logout, just delete this file)
+$username="dfsgds";
+$api_instagram_access_token="1828899312.dfgdg.45646456456456456456456"; //see README.md to learn how to create your own access token
+$arv=$tmp_path.$username."_dsamplecookie"; //cookie path (if u want to force logout, just delete this file)
 
 $userid=instagram_oauth_get_userid($username,$api_instagram_access_token,$arv);
-vd($userid);
+vd($search);
 
+//$lat="-22.910876";
+//$lng="-47.054306";
+//$distance="100";
+//$search=instagram_oauth_locationsbygeo($lat,$lng,$distance,$api_instagram_access_token,$arv);
+//vd($search);
+
+//$location="6782321";
+//$search=instagram_oauth_searchbylocation($location,$api_instagram_access_token,$arv);
+//vd($search);
 
 ?>
