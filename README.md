@@ -18,7 +18,7 @@ apt-get update & apt-get upgrade
 apt-get install php5-curl php5-sqlite php5-cli
 
 apt-get install git
-git clone https://bitbucket.org/intrd/instagram-api-oauth/
+git clone https://github.org/intrd/instagram-api-oauth/
 
 # Dependencies.. 
 Stay outside and clone all dependencies below..
