@@ -15,6 +15,26 @@
 
 require_once($ext_path."php-common/functions.php"); //calling common functions
 
+function instagram_oauth_searchbylocation($location,$api_instagram_access_token,$cookie_jar_file){
+  $token = $api_instagram_access_token;
+  $url = "https://api.instagram.com/v1/locations/$location/media/recent?access_token=".$token;
+  $header = array();
+  $get = url_get($url,$cookie_jar_file,"r",$header)["content"];
+  $json = json_decode($get);
+  return $json->data;
+  return false; 
+}
+
+function instagram_oauth_locationsbygeo($lat,$lng,$distance,$api_instagram_access_token,$cookie_jar_file){
+  $token = $api_instagram_access_token;
+  $url = "https://api.instagram.com/v1/locations/search?lat=".$lat."&lng=".$lng."&distance=".$distance."&access_token=".$token;
+  $header = array();
+  $get = url_get($url,$cookie_jar_file,"r",$header)["content"];
+  $json = json_decode($get);
+  return $json;
+  return false; 
+}
+
 function instagram_oauth_get_userid($username,$api_instagram_access_token,$cookie_jar_file){
   $token = $api_instagram_access_token;
   $url = "https://api.instagram.com/v1/users/search?q=".$username."&access_token=".$token;
