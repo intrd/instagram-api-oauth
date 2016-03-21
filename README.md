@@ -50,3 +50,7 @@ curl -F 'client_id=CLIENT_ID' \
     https://api.instagram.com/oauth/access_token
 ```
 ...this will return a valid access token
+
+##Location id tips
+- Search foursquare location id http://worldc.am/id/4c9f7c3246978cfad751ab7f and convert here to instagram location id http://instagramwordpress.rafsegat.com/docs/find-location-id/
+- Search latlng by drawing a radius on map http://obeattie.github.io/gmaps-radius/?radiusInput=125&unitSelector=mi
